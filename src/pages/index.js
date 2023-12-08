@@ -15,9 +15,9 @@ const HomePage = () => {
         session?.user ? <div>
           <Image width={150} height={200} src={session?.user?.image} style={{ marginLeft: "46%", marginTop: "10%", borderRadius: "10%" }} alt="userImage" />
           <p style={{ textAlign: "center" }}>
-            <b>Your Name:</b> {session?.user?.name}
+            <b>User Name:</b> {session?.user?.name}
           </p>
-          <p style={{ textAlign: "center" }}> <b>Github Email:</b> {session?.user?.email}</p>
+          <p style={{ textAlign: "center" }}> <b>User Email:</b> {session?.user?.email}</p>
           <p style={{ textAlign: "center" }}> <b>User Status:</b> {status}</p>
         </div> : ""
       }
