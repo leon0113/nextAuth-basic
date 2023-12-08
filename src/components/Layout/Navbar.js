@@ -2,12 +2,13 @@ import { Layout, Menu, Button } from "antd";
 const { Header } = Layout;
 import Link from "next/link";
 import { useSession, signOut } from "next-auth/react";
+import Image from "next/image";
 
 
 const Navbar = () => {
 
   const { data: session } = useSession();
-  console.log(session);
+  // console.log(session);
 
   return (
     <Header
@@ -38,6 +39,12 @@ const Navbar = () => {
           justifyContent: "space-between",
         }}
       >
+        <Link
+          style={{ textDecoration: "none", color: "white" }}
+          href="/profile"
+        >
+          <Image width={40} height={40} style={{ borderRadius: "50%" }} src={session?.user?.image} alt="img" />
+        </Link>
         <Link
           style={{ textDecoration: "none", color: "white" }}
           href="/profile"
